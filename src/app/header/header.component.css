@@ -1,0 +1,30 @@
+.recipetitle{
+    font-family: 'Lexend', sans-serif;
+    font-size: 2.3rem;
+    font-weight: bold;
+    padding: 28px;
+    padding-left: 54px;
+}
+
+.search{
+    padding: 20px;
+}
+
+
+input[type=text]{
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+     border-radius: 20px;
+     border: 1px solid #e4dfdf;
+     /* color: #a0d18c; */
+     width: 50%;
+     position: absolute;
+     height: 40px;
+     padding-left: 10px;
+    }
+    
+input[type=text]:focus {
+     outline: none;
+     /* border: 1px solid #a0d18c; */
+     /* color: #2d9fd9; */
+}
