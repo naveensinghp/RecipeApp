@@ -10,14 +10,20 @@
     padding: 20px;
 }
 
+.parentclass{
+    display: flex;
+    justify-content: space-around;
+}
+
 
 input[type=text]{
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
      border-radius: 20px;
-     border: 1px solid #e4dfdf;
+     border: 1px solid #c1bdbd;
      /* color: #a0d18c; */
      width: 50%;
+     background: #eaeaea;
      position: absolute;
      height: 40px;
      padding-left: 10px;
@@ -28,3 +34,22 @@ input[type=text]:focus {
      /* border: 1px solid #a0d18c; */
      /* color: #2d9fd9; */
 }
+
+.selectWrapper{
+    font-family: 'Lexend', sans-serif;
+    border-radius:36px;
+    display:inline-block;
+    overflow:hidden;
+    background:#cccccc;
+    border:1px solid #cccccc;
+  }
+  .selectBox{
+    padding: 10px;
+    width:180px;
+    height:40px;
+    border:0px;
+    outline:none;
+  }
+  .tht{
+      font-weight: bold;
+  }

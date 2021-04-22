@@ -3,7 +3,11 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap');
 
-html, body { height: 100%;outline: none; }
+html, body { 
+    height: 100%;
+    outline: none;
+    background: #eaeaea; 
+}
 
 button:focus {outline:0;box-shadow: none;}
 
