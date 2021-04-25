@@ -4,31 +4,35 @@
 
 <div style="font-size: 40px;font-family: 'Lexend', sans-serif;"> Login</div> -->
 
-
-<div class="" >
-    <div class="row">
-        <div class="col-lg-2">
-            <div class="recipetitle">
-                Recipes
-            </div>
-        </div>
-        <div class="col-lg-8">
-            <div class="search">
-                <input type="text"
-                placeholder="&#xf002; &nbsp;&nbsp;&nbsp; Search Recipes and more..."
-                style="padding-left: 10px;font-family: 'Lexend', sans-serif,'Font Awesome 5 Free';"
-                >
-            </div>
-        </div>
-        <div class="col-lg-2">
-            <div class="selectWrapper">
-                <select class="selectBox">
-                <option>Sort by : <span class="tht">Newest </span></option>
-                <option>Sort by : Ascending</option>
-                <option>Sort by : Descending</option>
-              </select>
-              </div>
-        </div>
+<div class="d-flex justify-content-between">
+  <!-- Recipe Title Logo -->
+  <div class="mt-3">
+    <div class="recipetitle">
+      Recipes
     </div>
+  </div>
+  <div class="mt-3">
+    <!-- Recipe Search -->
+    <div>
+      <div class="search">
+        <input class="searchcategory" type="text" width="200px" placeholder="&#xf002; &nbsp;&nbsp;&nbsp; Search Recipes and more..." style="padding-left: 10px;font-family: 'Lexend', sans-serif,'Font Awesome 5 Free';">
+      </div>
+    </div>
+  </div>
+  <div class="mt-3">
+    <!-- Search Category -->
+    <div style="padding:20px">
+      <div class="selectWrapper">
+        <select class="selectBox">
+          <option>Sort by : <span class="tht">Newest </span></option>
+          <option>Sort by : Ascending</option>
+          <option>Sort by : Descending</option>
+        </select>
+      </div>
+    </div>
+  </div>
 </div>
 
+<div>
+  <app-sidebar></app-sidebar>
+</div>
