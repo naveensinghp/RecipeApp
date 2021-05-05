@@ -20,9 +20,19 @@
   justify-content: center;
 }
 
+.testimg{
+  background: #ffffff;
+  border: 1px solid #DFDFDF;
+  padding: 5px;
+  border-radius: 39%;
+  width: 39px;
+  float: left;
+}
+
 .notrecipebutton{
   background-color: #f9b400; /* Green */
-  border: none;
+  border: 1px solid #c5c4c4;
+  background: #eaeaea;
   font-family: 'Lexend', sans-serif;
   color: #000000;
   padding: 10px;
@@ -37,9 +47,11 @@
 
 .notactive{
   border: none;
+  border: 1px solid #c5c4c4;
   font-family: 'Lexend', sans-serif;
   color: #000000;
-  padding: 10px;
+  background: #eaeaea;
+  padding: 4px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -50,7 +62,8 @@
   cursor: pointer;
 }
 .recipebutton{
-  background-color: #f9b400; /* Green */
+  background-color: #e0b400; /* Green */
+  background-image:linear-gradient(290deg, #ffb84f, #67404000);
   border: none;
   font-family: 'Lexend', sans-serif;
   color: #000000;
@@ -120,4 +133,14 @@ input.searchcategory[type=text]:focus {
 .test {
   padding: 20px;
   background: chocolate;
+}
+
+
+.bb {
+  display:block;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  border: 1px solid red;
+  
 }

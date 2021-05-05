@@ -7,30 +7,56 @@
 
 <div class="sr">
   <div class="sd">
-    <button class="notactive">
-      <i class="fas fa-pizza-slice" style="font-size:18px;background-color: #fff;padding:10px;border-radius:20px;margin-left:-10%"></i>
-      <span style="margin-right:50px;padding-left:11px;">Pizza</span>
+    <!-- <button class="notactive">
+      <img src="assets/img/pizza.png" class="testimg" width="36">
+      <span style="margin-right:50px;padding-left:11px;">Breakfast</span>
     </button> <br/>
-    <button class="recipebutton">
+    <button class="notactive"
+    [ngClass]="{'recipebutton' : isActive =='breakfast'}"
+    (click)="onClickp('breakfast')"
+    >
+      <i class="fas fa-pizza-slice" style="font-size:18px;background-color: #fff;padding:10px;border-radius:20px"></i>
+      <span style="margin-right:50px;padding-left:11px;">Breakfast</span>
+    </button> <br/>
+    <button class="notactive"
+    [ngClass]="{recipebutton: isActive}"
+    (click)="onClickp('lunch')"
+    >
       <i class="fa fa-birthday-cake" style="font-size:18px;background-color: #fff;padding:10px;border-radius:20px;margin-left:-10%"></i>
-      <span style="margin-right:50px;padding-left:11px;">Dessert</span>
+      <span style="margin-right:50px;padding-left:11px;">Lunch</span>
     </button> <br/>
-    <button class="recipebutton">
+    <button class="notactive">
       <i class="fas fa-store" style="font-size:18px;background-color: #fff;padding:10px;border-radius:20px;margin-left:-10%"></i>
-      <span style="margin-right:50px;padding-left:11px;">Noodles</span>
+      <span style="margin-right:50px;padding-left:11px;">Soups</span>
     </button> <br/>
-    <button class="recipebutton">
+    <button class="notactive">
       <i class="fas fa-glass-martini-alt" style="font-size:18px;background-color: #fff;padding:10px;border-radius:20px;margin-left:-10%"></i>
-      <span style="margin-right:50px;padding-left:11px;">Cocktail</span>
+      <span style="margin-right:50px;padding-left:11px;">Snacks</span>
+    </button> <br/>
+    <button class="notactive">
+      <i class="fas fa-glass-martini-alt" style="font-size:18px;background-color: #fff;padding:10px;border-radius:20px;margin-left:-10%"></i>
+      <span style="margin-right:50px;padding-left:11px;">Desserts</span>
     </button>
   </div>
   <div>
-
-    <br />
-
-    <!-- <button class="recipebuttons">
-  <div>
-    <img style="font-size:18px;background-color: #fff;padding:10px;border-radius:20px;margin-left:-10%" src="assets/img/pizza.png" width="32">
+-->
+  
+<div class="sr">
+  <div class="sd">
+    <button
+    class="notactive"
+    *ngFor="let state of states"
+    (click)="setStateAsActive(state)"
+    [class.recipebutton]="state === activeState"
+    >
+    <img src="{{state.img}}" class="testimg" width="63">
+      <span style="display: flex;align-items: center;justify-content: center;height: 4vh;">{{state.type}}</span>
+    </button>
   </div>
-  <span style="margin-right:50px;padding-left:11px;">Salad</span>
-</button> -->
+
+</div>
+
+
+
+
+
