@@ -1,62 +1,68 @@
-<!-- <input class="recipecat" type="button" value="Pizza" width="200px"> <br/>
-<input class="recipecat" type="button" value="Dessert" width="200px">
- <br/>
-   <input class="recipecat" type="button" value="Noodle" width="200px"> <br/>
-   <input class="recipecat" type="button" value="Cocktail" width="200px"> <br/>
-   <input class="recipecat" type="button" value="Salad" width="200px"> <br/> -->
-
-<div class="sr">
-  <div class="sd">
-    <!-- <button class="notactive">
-      <img src="assets/img/pizza.png" class="testimg" width="36">
-      <span style="margin-right:50px;padding-left:11px;">Breakfast</span>
-    </button> <br/>
-    <button class="notactive"
-    [ngClass]="{'recipebutton' : isActive =='breakfast'}"
-    (click)="onClickp('breakfast')"
-    >
-      <i class="fas fa-pizza-slice" style="font-size:18px;background-color: #fff;padding:10px;border-radius:20px"></i>
-      <span style="margin-right:50px;padding-left:11px;">Breakfast</span>
-    </button> <br/>
-    <button class="notactive"
-    [ngClass]="{recipebutton: isActive}"
-    (click)="onClickp('lunch')"
-    >
-      <i class="fa fa-birthday-cake" style="font-size:18px;background-color: #fff;padding:10px;border-radius:20px;margin-left:-10%"></i>
-      <span style="margin-right:50px;padding-left:11px;">Lunch</span>
-    </button> <br/>
-    <button class="notactive">
-      <i class="fas fa-store" style="font-size:18px;background-color: #fff;padding:10px;border-radius:20px;margin-left:-10%"></i>
-      <span style="margin-right:50px;padding-left:11px;">Soups</span>
-    </button> <br/>
-    <button class="notactive">
-      <i class="fas fa-glass-martini-alt" style="font-size:18px;background-color: #fff;padding:10px;border-radius:20px;margin-left:-10%"></i>
-      <span style="margin-right:50px;padding-left:11px;">Snacks</span>
-    </button> <br/>
-    <button class="notactive">
-      <i class="fas fa-glass-martini-alt" style="font-size:18px;background-color: #fff;padding:10px;border-radius:20px;margin-left:-10%"></i>
-      <span style="margin-right:50px;padding-left:11px;">Desserts</span>
-    </button>
+<div class="main-container">
+<div class="row">
+  <div class="col-lg-4">
+    <div class="sr">
+      <div class="sd">
+        <button
+          class="buttontest"
+          *ngFor="let state of states"
+          (click)="setStateAsActive(state)"
+          [class.recipebutton]="state === activeState"
+        >
+          <div class="social-links">
+            <div class="testimg">
+              <img src="{{ state.img }}" style="width: 22px" />
+            </div>
+          </div>
+          <div>{{ state.type }}</div>
+        </button>
+      </div>
+    </div>
   </div>
-  <div>
--->
-  
-<div class="sr">
-  <div class="sd">
-    <button
-    class="notactive"
-    *ngFor="let state of states"
-    (click)="setStateAsActive(state)"
-    [class.recipebutton]="state === activeState"
-    >
-    <img src="{{state.img}}" class="testimg" width="63">
-      <span style="display: flex;align-items: center;justify-content: center;height: 4vh;">{{state.type}}</span>
-    </button>
-  </div>
+  <div class="col-lg-4">
+    <div class="imgcc">
+      <mat-card class="example-card">
+        <mat-card-header class="reptit">
+           <mat-card-title>Citrus Salad Barries</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="reppara">
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+          bred for hunting.
+        </p>
+      </mat-card-content>
+        <div class="imgrep">
+          <img src="assets/img/pancake.jpeg" width="150">
+        </div>
+      </mat-card>
+    </div>
 
+  </div>
+  <div class="col-lg-4">
+    <mat-card>Avocoda Salad</mat-card>
+  </div>
+</div>
 </div>
 
 
 
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Citrus Salad Barries</mat-card-title>
+    <mat-card-subtitle>By Naveen Singh</mat-card-subtitle>
+  </mat-card-header>
 
-
+  <mat-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>READ MORE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>

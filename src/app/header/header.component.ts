@@ -33,7 +33,7 @@ export class SidebarComponent implements OnInit {
     { "img":'assets/img/lunch.png', "type":"Lunch" },
     { "img":'assets/img/dinner.png', "type":"Dinner" },
     { "img":'assets/img/snacks.png', "type":"Others" }
- 
+
    ];
   statess = [
     'Breakfast',
