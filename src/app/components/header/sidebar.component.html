@@ -1,8 +1,12 @@
 <div class="sidebarpart">
-    <div *ngFor="let state of states">
-        <button class="button">
-            <img src="{{state.img}}" class="imgalign" />
-            {{state.type}}
-        </button>
-    </div>
+  <div *ngFor="let state of recipemode">
+    <button
+      class="notactive"
+      (click)="recipecat(state.recipe_type)"
+      [class.active]="state.recipe_type === activeState"
+    >
+      <img src="{{ state.img }}" class="imgalign" />
+      {{ state.recipe_type }}
+    </button>
+  </div>
 </div>

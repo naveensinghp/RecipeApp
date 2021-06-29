@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {MatIconModule} from '@angular/material/icon';
+import { APIResponse,RecipeCategory } from 'src/app/model';
+import { ApiBackendService } from 'src/app/services/api-backend.service';
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { AddrecipeComponent } from '../addrecipe/addrecipe.component';
+import { LoginComponent } from '../login/login.component';
+
 
 
 @Component({
@@ -9,9 +15,15 @@ import {MatIconModule} from '@angular/material/icon';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  addRecipe():void{
+    const dialogRef = this.dialog.open(LoginComponent,{
+      width: '500px',
+    })
   }
 
 }
@@ -23,18 +35,31 @@ export class HeaderComponent implements OnInit {
   styleUrls: ['./header.component.css']
 })
 export class SidebarComponent implements OnInit {
-
-  constructor() { }
+  recipemode: Array<RecipeCategory>
+  activeState = 'draft';
+  constructor(
+    private httpservice:ApiBackendService,
+  ) { }
 
   ngOnInit(): void {
+    this.getRecp();
   }
-  public states=[
+  
 
-    { "img":'assets/img/breakfast.png', "type":"Breakfast" },
-    { "img":'assets/img/lunch.png', "type":"Lunch" },
-    { "img":'assets/img/dinner.png', "type":"Dinner" },
-    { "img":'assets/img/snacks.png', "type":"Others" }
+   recipecat(type:string){
+     this.activeState = type
+   }
 
-   ];
+   getRecp(){
+     this.httpservice.getRecipeCategory().subscribe((res:APIResponse<RecipeCategory>) =>{
+       this.recipemode = res.response
+       console.log(this.recipemode)
+    
+     })
+   }
+
+   ngOnDestroy():void{
+
+   }
 
 }

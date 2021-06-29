@@ -1,0 +1,29 @@
+.example-card {
+    max-width: 400px;
+    border-radius: 10px;
+  }
+
+  .recipelist{
+      padding: 50px;
+      display: flex;
+      gap: 10px;
+  }
+
+  .example-header-image {
+    background-image: url('http://localhost:4200/assets/img/user.png');
+    background-size: cover;
+  }
+
+.parent{
+    display: flex;
+}
+.childone{
+    flex: 1;
+}
+
+.ghg{
+    display: flex;
+}
+.childone:childtwo{
+    margin-right: 20px;
+}

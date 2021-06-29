@@ -9,6 +9,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { HeaderComponent, SidebarComponent } from './components/header/header.component';
+import { RecipelistComponent } from './components/recipelist/recipelist/recipelist.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { AddrecipeComponent } from './components/addrecipe/addrecipe.component';
+import { LoginComponent } from './components/login/login.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+
+
+
 
 
 
@@ -16,17 +27,27 @@ import { HeaderComponent, SidebarComponent } from './components/header/header.co
   declarations: [
     AppComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    RecipelistComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatDialogModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatIconModule,
+    MatMenuModule,
     MatCardModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
+
+  entryComponents: [LoginComponent],
   providers: [],
   bootstrap: [AppComponent],
   schemas: []

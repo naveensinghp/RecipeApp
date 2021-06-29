@@ -1,15 +1,55 @@
-
-<div class="flex-container">
-    <div class="recipetitle">
-        Recipes
+<div class="d-flex justify-content-center">
+    <div class="flex-container">
+        <div class="recipetitle">
+            Recipes
+        </div>
+        <div class="search">
+            <input class="searchcategory" type="text" width="200px" placeholder="&#xf002; &nbsp;&nbsp;&nbsp; Search Recipes and more..." style="padding-left: 10px;font-family: 'Lexend', sans-serif,'Font Awesome 5 Free';">
+        </div>
+        <div class="addrecp">
+            <button mat-raised-button (click)="addRecipe()" color="accent">
+                <mat-icon>dinner_dining</mat-icon> Add Your Recipe
+              </button>
+        </div>
+        <!-- <div class="loggeduser">
+            Hi <span class="name"> Naveen Singh </span>
+        </div>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>restaurant</mat-icon>
+              <span>My Recipes</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>manage_accounts</mat-icon>
+              <span>My Profile</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>logout</mat-icon>
+              <span>Log out</span>
+            </button>
+          </mat-menu> -->
+          
     </div>
-    <div class="search">
-        <input class="searchcategory" type="text" width="200px" placeholder="&#xf002; &nbsp;&nbsp;&nbsp; Search Recipes and more..." style="padding-left: 10px;font-family: 'Lexend', sans-serif,'Font Awesome 5 Free';">
-    </div>
-    <div class="addrecp">
-        <button class="btn btn-primary">Add Recipe</button>
-    </div>
+    
 </div>
 
+<div class="sidemenu" style="padding-left: 70px;">
+    <sidebar></sidebar>
+</div>
 
-<sidebar></sidebar>
+<!-- <div class="row">
+    <div class="col-lg-12">
+      <div class="flex-container">
+          <sidebar></sidebar>
+          <app-recipelist></app-recipelist>
+       </div>
+       <div class="ghjd">
+        
+        </div>
+    </div>
+    
+</div> -->
+

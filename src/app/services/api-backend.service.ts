@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environments/environment';
-import { RequestOptions, Http,URLSearchParams,Headers } from '@angular/http';
-
+import { environment as env } from '../../environments/environment';
+import { APIResponse,RecipeCategory } from '.././model';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -12,11 +12,16 @@ export class ApiBackendService {
 
   constructor(private http: HttpClient) { }
 
-  getTestData(){
-    const headers = new Headers({'Accept':'application/json'});
-    let myParams : URLSearchParams = new URLSearchParams();
-     let options = new RequestOptions({params: myParams,headers : headers });
-     let apiURL = `${environment.api}mongodb/test`;
-     console.log(apiURL)
+  getRecipeCategory(){
+    return this.http.get<APIResponse<RecipeCategory>>(`${env.API_URL}/recipe/category`)
   }
+
+  getProducts(): Observable<RecipeCategory[]> {
+    return this.http.get<RecipeCategory[]>(`${env.API_URL}/recipe/category`);
+  }
+}
+export interface Product{
+  code: string;
+  description: string;
+  type: string;
 }

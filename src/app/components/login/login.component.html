@@ -1,0 +1,97 @@
+<div class="loginpage" *ngIf="!forgotpassword && !createaccount">
+  <div class="row">
+    <div class="col-lg-12">
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input matInput/>
+          <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" />
+          <mat-icon matSuffix>lock</mat-icon>
+        </mat-form-field>
+        <span class="frgpwd" (click)="toggleforgetpwd()">Forgot Password ?</span>
+        <span class="crnew" (click)="createnewacc()">Create an account</span>
+        <div class="logbtn">
+          <button type="button" class="btn btn-primary btn-block">Login</button>
+        </div>
+        <div class="orsign">
+          <button type="button" class="btn btn-outline-primary btn-block">
+            Gmail
+          </button>
+          <button type="button" class="btn btn-outline-primary btn-block">
+            Twitter
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<div class="forgotpwd" *ngIf="forgotpassword">
+  <button mat-button (click)="toggleforgetpwd()">
+    <mat-icon matSuffix>arrow_back</mat-icon> &nbsp;
+    Back
+  </button>
+  <div class="row">
+    <div class="col-lg-12">
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input matInput/>
+          <mat-icon matSuffix>person</mat-icon>
+          <mat-hint>You Will Receive Password in Email</mat-hint>
+        </mat-form-field>
+      </form>
+      <div class="logbtn">
+        <button type="button" class="btn btn-primary btn-block">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="createacc" *ngIf="createaccount">
+  <div class="row">
+    <div class="col-lg-12">
+      <form class="example-form" [formGroup]="newaccountform" (ngSubmit)="submitForm()">
+        <mat-form-field class="example-full-width">
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name" />
+          <mat-error *ngIf="this.newaccountform.controls.name.errors?.required">
+            Required
+          </mat-error>
+          <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+        <!-- <div class="text-danger" *ngIf="this.newaccountform.controls.name.errors?.required">
+          Name is required.{{this.newaccountform.controls.name.errors.required}}
+        </div> -->
+        <mat-form-field class="example-full-width">
+          <mat-label>Email Address</mat-label>
+          <input matInput formControlName="email" type="email"/>
+          <mat-error *ngIf="this.newaccountform.controls.email.errors?.required">
+            Required
+          </mat-error>
+          <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Password</mat-label>
+          <input matInput/>
+          <mat-icon matSuffix>password</mat-icon>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Confirm Password</mat-label>
+          <input matInput/>
+          <mat-icon matSuffix>lock_open</mat-icon>
+        </mat-form-field>
+        <div class="logbtn">
+          <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
