@@ -17,8 +17,11 @@ export class LoginComponent implements OnInit {
      private fb: FormBuilder,
   ) {
     this.newaccountform = fb.group({
-      name: [null, [Validators.required]],
-      email: [null, [Validators.required]],
+       name: [null, [Validators.required]],
+       email: [null, [Validators.required]],
+       password: [null, [Validators.required]],
+       confirm_password: [null, [Validators.required]],
+
       })
 
       //console.log(this.newaccountform);
