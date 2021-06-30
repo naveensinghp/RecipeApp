@@ -17,6 +17,8 @@ import { AddrecipeComponent } from './components/addrecipe/addrecipe.component';
 import { LoginComponent } from './components/login/login.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 
 
@@ -44,7 +46,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSnackBarModule
   ],
 
   entryComponents: [LoginComponent],
