@@ -53,7 +53,7 @@ export class SidebarComponent implements OnInit {
    getRecp(){
      this.httpservice.getRecipeCategory().subscribe((res:APIResponse<RecipeCategory>) =>{
        this.recipemode = res.response
-       console.log(this.recipemode)
+       //console.log(this.recipemode)
     
      })
    }

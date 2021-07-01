@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {MatSnackBar, MatSnackBarConfig} from '@angular/material';
+import {MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Injectable({
@@ -11,7 +11,7 @@ export class GlobalsService {
     public snackBar: MatSnackBar
   ) { }
 
-  openSnackBar(message,type=1,action=" DISMISS"){
+  openSnackBar(message,type=1,action="DISMISS"){
     var panelClass = '';
     if(type==1){
       panelClass='success';

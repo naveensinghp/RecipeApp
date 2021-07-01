@@ -11,6 +11,10 @@ html, body {
 
 button:focus {outline:0;box-shadow: none;}
 
+.mat-snack-bar-container.error {
+    background:#ef5350;
+    color:white;
+}
 
 *:focus {
     outline: none !important;

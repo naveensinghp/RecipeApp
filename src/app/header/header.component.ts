@@ -61,16 +61,13 @@ export class SidebarComponent implements OnInit {
   constructor(private _resource : ApiBackendService) { }
 
   ngOnInit(): void {
-    this.getTestingData()
+    
   }
   onClickp(catgeory){
     this.isActive = !this.isActive
 
   }
 
-  getTestingData(){
-    console.log('in',this._resource.getTestData())
-  }
-
+ 
 
 }
