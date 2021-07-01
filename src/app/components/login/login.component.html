@@ -58,7 +58,7 @@
 <div class="createacc" *ngIf="createaccount">
   <div class="row">
     <div class="col-lg-12">
-      <form class="example-form" [formGroup]="newaccountform" (ngSubmit)="submitForm()">
+      <form class="example-form"  [formGroup]="newaccountform" (ngSubmit)="submitForm(newaccountform.value)">
         <mat-form-field class="example-full-width">
           <mat-label>Name</mat-label>
           <input matInput formControlName="name" />
@@ -76,6 +76,7 @@
           <mat-error *ngIf="this.newaccountform.controls.email.errors?.required">
             Required
           </mat-error>
+          
           <mat-icon matSuffix>email</mat-icon>
         </mat-form-field>
         <mat-form-field class="example-full-width">

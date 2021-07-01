@@ -11,3 +11,7 @@ export interface APIResponse<T>{
 }
 
 
+export class NewAccountUser{
+  name: string;
+  email: string;
+}

@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup,Validators } from '@angular/forms'
+import { ApiBackendService } from 'src/app/services/api-backend.service';
+import { NewAccountUser } from '.././model';
+
+
 
 
 @Component({
@@ -15,10 +19,11 @@ export class LoginComponent implements OnInit {
 
   constructor(
      private fb: FormBuilder,
+     private httpservice:ApiBackendService,
   ) {
     this.newaccountform = fb.group({
        name: [null, [Validators.required]],
-       email: [null, [Validators.required]],
+       email: [null, [Validators.required,Validators.email]],
        password: [null, [Validators.required]],
        confirm_password: [null, [Validators.required]],
 
@@ -38,8 +43,23 @@ export class LoginComponent implements OnInit {
     this.createaccount =!this.createaccount;
   }
 
-  submitForm(){
-    console.log('Test',this.newaccountform);
+  submitForm(formValues: any){
+    console.log(this.newaccountform);
+    // console.log('formval',formValues)
+    this.httpservice.createNewAccount(formValues)
+      .subscribe(
+        (data: NewAccountUser) => console.log(data),
+        (err: any) => console.log(err)
+      );
   }
+
+  // async submitForm(){
+  //
+  //   try{
+  //
+  //   }catch(error){
+  //     console.error(error)
+  //   }
+  // }
 
 }
