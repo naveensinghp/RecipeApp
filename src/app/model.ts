@@ -14,4 +14,6 @@ export interface APIResponse<T>{
 export class NewAccountUser{
   name: string;
   email: string;
+  password: string;
+  confirm_password: string;
 }
