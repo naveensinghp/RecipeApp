@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit {
       },
       (err: any) => {
         console.log('error', err);
-        this.global.openSnackBar(err, 1);
+        this.global.openSnackBar(err, 2);
       }
     );
   }

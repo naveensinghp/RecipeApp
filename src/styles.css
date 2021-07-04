@@ -11,10 +11,13 @@ html, body {
 
 button:focus {outline:0;box-shadow: none;}
 
-.mat-snack-bar-container.error {
+.mat-snack-bar-container.error  {
     background:#ef5350;
-    color:white;
 }
+.mat-snack-bar-container.error .mat-button-wrapper {
+    color: #fff;
+}
+
 
 *:focus {
     outline: none !important;
